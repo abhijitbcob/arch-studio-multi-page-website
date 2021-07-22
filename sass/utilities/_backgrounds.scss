@@ -1,0 +1,17 @@
+@use '../abstracts'as *;
+
+
+
+.bg-primary {
+    background-color: hsl(209, 46%, 95%);
+}
+
+.bg-secondary {
+    background-color: var(--mirage-blue);
+}
+
+.md\:bg-transparent {
+    @include respond-to(medium) {
+        background-color: transparent;
+    }
+}

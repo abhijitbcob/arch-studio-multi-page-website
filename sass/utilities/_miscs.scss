@@ -1,0 +1,30 @@
+@use '../abstracts'as *;
+
+.page-active {
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2.4rem;
+        height: 0.1rem;
+        background-color: var(--very-dark-blue);
+    }
+}
+
+.u-main-content {
+    padding-top: 2.7rem;
+    padding-bottom: 13.2rem;
+
+    @include respond-to(medium) {
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+    }
+
+    @include respond-to(large) {
+        padding-bottom: 16rem;
+    }
+
+}

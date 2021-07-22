@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet"> -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Arch Studio Website Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img class="logo" src="assets/logo.svg" alt="logo">
+        </a>
+        <nav class="header__nav hide-upto-md">
+          <ul class="flex items-center nav-list header__nav-list">
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-name-label"><span>home</span></div>
+
+    <div class="container-sm">
+      <div class="carousel">
+        <div class="siema">
+          <div class="slide">
+            <div class="slide-image u-black-overlay u-bg-black-35">
+              <picture>
+                <source media="(min-width: 992px)" srcset="assets/home/desktop/image-hero-paramour.jpg">
+                <source media="(min-width: 768px)" srcset="assets/home/tablet/image-hero-paramour.jpg">
+                <img src="assets/home/mobile/image-hero-paramour.jpg" alt="building image">
+              </picture>
+            </div>
+            <article class="slide-content slide-content-same-width">
+              <h2 class="heading-1--small">Project Paramour</h2>
+              <p class="paragraph text-white">
+                Project made for an art museum near Southwest London. Project Paramour is
+                a statement of bold, modern architecture.
+              </p>
+              <a href="portfolio.html" class="btn btn-primary">
+                See Our Portfolio
+                <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+              </a>
+            </article>
+          </div>
+
+          <div class="slide">
+            <div class="slide-image u-black-overlay u-bg-black-35">
+              <picture>
+                <source media="(min-width: 992px)" srcset="assets/home/desktop/image-hero-seraph.jpg">
+                <source media="(min-width: 768px)" srcset="assets/home/tablet/image-hero-seraph.jpg">
+                <img src="assets/home/mobile/image-hero-seraph.jpg" alt="building image">
+              </picture>
+            </div>
+            <article class="slide-content slide-content-same-width">
+              <h2 class="heading-1--small">Seraph Station</h2>
+              <p class="paragraph text-white">
+                The Seraph Station project challenged us to design a unique station that would
+                transport people through time. The result is a fresh and futuristic model
+                inspired by space stations.
+              </p>
+              <a href="portfolio.html" class="btn btn-primary">
+                See Our Portfolio
+                <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+              </a>
+            </article>
+          </div>
+
+          <div class="slide">
+            <div class="slide-image u-black-overlay u-bg-black-35">
+              <picture>
+                <source media="(min-width: 992px)" srcset="assets/home/desktop/image-hero-federal.jpg">
+                <source media="(min-width: 768px)" srcset="assets/home/tablet/image-hero-federal.jpg">
+                <img src="assets/home/mobile/image-hero-federal.jpg" alt="building image">
+              </picture>
+            </div>
+            <article class="slide-content slide-content-same-width">
+              <h2 class="heading-1--small">Federal II Tower</h2>
+              <p class="paragraph text-white">
+                A sequel theme project for a tower originally built in the 1800s. We achieved
+                this with a striking look of brutal minimalism with modern touches.
+              </p>
+              <a href="portfolio.html" class="btn btn-primary">
+                See Our Portfolio
+                <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+              </a>
+            </article>
+          </div>
+
+          <div class="slide">
+            <div class="slide-image u-black-overlay u-bg-black-35 ">
+              <picture>
+                <source media="(min-width: 992px)" srcset="assets/home/desktop/image-hero-trinity.jpg">
+                <source media="(min-width: 768px)" srcset="assets/home/tablet/image-hero-trinity.jpg">
+                <img src="assets/home/mobile/image-hero-trinity.jpg" alt="building image">
+              </picture>
+            </div>
+            <article class="slide-content slide-content-differ-width">
+              <h2 class="heading-1--small">Trinity Bank Tower</h2>
+              <p class="paragraph text-white">
+                Trinity Bank challenged us to make a concept for a 84 story building located
+                in the middle of a city with a high earthquake frequency. For this project we
+                used curves to blend design and stability to meet our objectives.
+              </p>
+              <a href="portfolio.html" class="btn btn-primary">
+                See Our Portfolio
+                <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel__indicators"></div>
+      </div>
+    </div>
+
+
+    <section class="section-welcome">
+      <div class="container">
+        <h1 class="heading-1--large relative">
+          Welcome
+        </h1>
+
+        <div class="section-welcome__content">
+          <article class="u-article">
+            <div class="u-little-hr hide-from-md"></div>
+
+            <h2 class="heading-2 text-black">
+              Welcome to Arch Studio
+            </h2>
+            <p class="paragraph">
+              We have a unique network and skillset to help bring your projects to life. Our
+              small team of highly skilled individuals combined with our large network put us
+              in a strong position to deliver exceptional results.
+            </p>
+            <p class="paragraph">
+              Over the past 10 years, we have worked on all kinds of projects. From stations
+              to high-rise buildings, we create spaces that inspire and delight.
+            </p>
+
+            <p class="paragraph">
+              We work closely with our clients so that we understand the intricacies of each
+              project. This allows us to work in harmony the surrounding area to create truly
+              stunning projects that will stand the test of time.
+            </p>
+          </article>
+          <img src="assets/home/desktop/image-welcome.jpg" alt="building">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-sm">
+        <div class="small-team u-black-overlay u-bg-black-50">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/home/desktop/image-small-team.jpg">
+            <source media="(min-width: 768px)" srcset="assets/home/tablet/image-small-team.jpg">
+            <img class="w-full" src="assets/home/mobile/image-small-team.jpg" alt="architecture">
+          </picture>
+
+          <div class="small-team-inner z-10">
+            <h2 class="heading-2 text-white">Small team, big ideas</h2>
+            <a href="about.html" class="btn btn-primary">
+              About Us
+              <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-featured">
+      <div class="container section-featured__grid">
+        <h2 class="heading-2 text-black">Featured</h2>
+        <a href="portfolio.html" class="btn btn-primary">
+          See all
+          <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+        </a>
+
+        <div class="grid lg:grid-col-3 featured-projects-grid projects-grid">
+          <figure class="project-figure project-figure-index">
+            <picture>
+              <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-del-sol.jpg">
+              <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-del-sol.jpg">
+              <img src="assets/portfolio/mobile/image-del-sol.jpg" alt="building">
+            </picture>
+            <figcaption class="project-figure-caption">
+              <h3 class="heading-3 text-white">Project Del Sol</h3>
+              <a href="portfolio.html">View All Projects</a>
+            </figcaption>
+          </figure>
+
+          <figure class="project-figure project-figure-index">
+            <picture>
+              <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-228b.jpg">
+              <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-228b.jpg">
+              <img src="assets/portfolio/mobile/image-228b.jpg" alt="building">
+            </picture>
+            <figcaption class="project-figure-caption">
+              <h3 class="heading-3 text-white">Project Del Sol</h3>
+              <a href="portfolio.html">View All Projects</a>
+            </figcaption>
+          </figure>
+
+          <figure class="project-figure project-figure-index">
+            <picture>
+              <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-prototype.jpg">
+              <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-prototype.jpg">
+              <img src="assets/portfolio/mobile/image-prototype.jpg" alt="building">
+            </picture>
+            <figcaption class="project-figure-caption">
+              <h3 class="heading-3 text-white">Project Del Sol</h3>
+              <a href="portfolio.html">View All Projects</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container-lg">
+      <div class="footer__grid">
+        <a href="index.html" class="footer__logo"><img src="assets/logo-white.svg" alt="arch studio logo"></a>
+
+
+        <ul class="footer__nav flex items-center flex-col md:flex-row nav-list footer__nav-list">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+
+        <a href="portfolio.html" class="btn btn-primary">
+          See Our Portfolio
+          <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/siema.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

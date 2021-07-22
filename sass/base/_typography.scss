@@ -1,0 +1,94 @@
+@use '../abstracts'as *;
+
+// Typography utilities
+.uppercase {
+    text-transform: uppercase;
+}
+
+.font-bold {
+    font-weight: var(--font-bold);
+}
+
+.font-medium {
+    font-weight: var(--font-medium);
+}
+
+// text colors
+.text-white {
+    color: var(--pure-white);
+}
+
+.text-black {
+    color: var(--very-dark-blue);
+}
+
+.text-grey {
+    color: var(--dark-grey);
+}
+
+
+.fs-15 {
+    font-size: 1.5rem;
+}
+
+
+.heading-1--large {
+    display: none;
+    color: var(--very-light-grey);
+
+    @include respond-to(medium) {
+        display: block;
+        font-size: 12rem;
+        letter-spacing: -3px;
+        line-height: 20rem;
+    }
+
+    @include respond-to(huge) {
+        font-size: 20rem;
+        letter-spacing: -5px;
+
+    }
+}
+
+.heading-1--small {
+    color: var(--pure-white);
+    font-size: 4.8rem;
+    font-weight: var(--font-bold);
+    letter-spacing: -1.2px;
+    line-height: 1;
+
+    @include respond-to(medium) {
+        font-size: 8rem;
+        letter-spacing: -2px;
+    }
+}
+
+.heading-2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: -1.43px;
+    font-weight: var(--font-bold);
+
+    @include respond-to(medium) {
+        font-size: 5.6rem;
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+}
+
+.heading-3 {
+    font-size: 1.8rem;
+    font-weight: var(--font-bold);
+}
+
+.heading-4 {
+    font-size: 1.5rem;
+    font-weight: var(--font-bold);
+    line-height: 3.5rem;
+}
+
+.paragraph {
+    font-size: 1.5rem;
+    font-weight: var(--font-medium);
+    line-height: 2.5rem;
+}

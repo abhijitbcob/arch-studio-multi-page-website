@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts'as *;
+
+
+.header {
+    padding-block: 3.2rem;
+    position: relative;
+
+    @include respond-to(medium) {
+        padding-block: 5.6rem;
+
+    }
+
+    &__nav {
+        margin-left: 9.4rem;
+    }
+}
+
+.logo {
+    width: 7.7rem;
+    height: 3.2rem;
+
+    @include respond-to(medium) {
+        width: 9.7rem;
+        height: 4rem;
+    }
+}

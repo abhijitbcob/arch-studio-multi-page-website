@@ -1,0 +1,38 @@
+@use '../abstracts'as *;
+
+
+/* REUSABLE GAP */
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-24 {
+    gap: 2.4rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.gap-56 {
+    gap: 5.6rem;
+}
+
+/* RESUABLE MARGIN */
+.ml-auto {
+    margin-left: auto;
+}
+
+
+
+/* RESUABLE PADDING */
+.common-container-padding {
+    padding-top: 0.8rem;
+    padding-bottom: 8rem;
+
+    @include respond-to(large) {
+        padding-top: 3.7rem;
+        padding-bottom: 9.6rem;
+    }
+}

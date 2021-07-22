@@ -1,0 +1,76 @@
+@use '../abstracts'as *;
+
+
+/* Reusable grid utilities  */
+.grid {
+    display: grid;
+}
+
+
+.md\:grid-col-2 {
+    @include respond-to(medium) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+.lg\:grid-col-2 {
+    @include respond-to(large) {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); // used
+    }
+}
+
+.lg\:grid-col-3 {
+    @include respond-to(large) {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); // used
+    }
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+// Utility grid for About and Contact page Hero section
+
+.u-hero {
+    &-grid {
+        display: grid;
+
+        @include respond-to(medium) {
+            grid-template-columns: 5.8rem 1fr;
+        }
+
+        @include respond-to(large) {
+            grid-template-columns: 48.2rem 15.3rem 1fr;
+        }
+
+    }
+
+    &-picture {
+
+        @include respond-to(medium) {
+            grid-column: 1/-1;
+            grid-row: 1/-1;
+
+        }
+
+        @include respond-to(large) {
+            grid-column: 1/3;
+        }
+    }
+
+    &-header {
+        background-color: var(--pure-white);
+        align-self: end;
+
+        @include respond-to(medium) {
+            grid-row: 1/-1;
+            grid-column: 2/3;
+
+        }
+
+        @include respond-to(large) {
+            grid-column: 2/-1;
+        }
+    }
+}

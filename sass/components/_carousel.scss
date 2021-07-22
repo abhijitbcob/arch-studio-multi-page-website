@@ -1,0 +1,78 @@
+@use '../abstracts'as *;
+
+/* Siema Carousel */
+.carousel {
+    position: relative;
+}
+
+.slide {
+    position: relative;
+
+    &-image {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-content {
+        max-height: 34rem;
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        z-index: 10;
+
+        display: grid;
+        align-items: start;
+        justify-items: start;
+        gap: 1.4rem;
+
+        .btn {
+            align-self: end;
+        }
+
+        padding-inline: 3.2rem;
+
+        @include respond-to(medium) {
+            max-height: 36rem;
+            padding-inline: 5.8rem;
+        }
+
+        @include respond-to(large) {
+            margin-left: 19rem;
+            padding-inline: 0;
+
+        }
+
+        &-same-width {
+            @include respond-to(large) {
+                max-width: 44.5rem;
+            }
+        }
+
+        &-differ-width {
+            @include respond-to(large) {
+                max-width: 54.4rem;
+
+                p {
+                    max-width: 44.5rem;
+                }
+            }
+
+        }
+    }
+}
+
+
+/* Carousel Indicators */
+.carousel__indicators {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -8rem;
+
+    @include respond-to(large) {
+        display: inline-block;
+    }
+}

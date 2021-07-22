@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet"> -->
+  <title>Frontend Mentor | Arch Studio Website Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="flex items-center">
+        <a href="index.html">
+          <img class="logo" src="assets/logo.svg" alt="logo">
+        </a>
+        <nav class="header__nav hide-upto-md">
+          <ul class="flex items-center nav-list header__nav-list">
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button id="menu-toggler">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-name-label"><span>portfolio</span></div>
+    <div class="container">
+      <div class="grid lg:grid-col-3 projects-grid portfolio-projects">
+        <!-- ROW I -->
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-seraph.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-seraph.jpg">
+            <img src="assets/portfolio/mobile/image-seraph.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Seraph Station</h3>
+            <time datetime="2021-09-01">September 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-eebox.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-eebox.jpg">
+            <img src="assets/portfolio/mobile/image-eebox.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Eebox Building</h3>
+            <time datetime="2021-09-01">August 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-federal.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-federal.jpg">
+            <img src="assets/portfolio/mobile/image-federal.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Federal II Tower</h3>
+            <time datetime="2021-09-01">January 2021</time>
+          </figcaption>
+        </figure>
+
+        <!-- Row II -->
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-del-sol.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-del-sol.jpg">
+            <img src="assets/portfolio/mobile/image-del-sol.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Project Del Sol</h3>
+            <time datetime="2021-09-01">March 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-228b.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-228b.jpg">
+            <img src="assets/portfolio/mobile/image-228b.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Project Del Sol</h3>
+            <time datetime="2021-09-01">February 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-prototype.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-prototype.jpg">
+            <img src="assets/portfolio/mobile/image-prototype.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Project Del Sol</h3>
+            <time datetime="2021-09-01">April 2021</time>
+          </figcaption>
+        </figure>
+
+        <!-- Row III -->
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-edelweiss.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-edelweiss.jpg">
+            <img src="assets/portfolio/mobile/image-edelweiss.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Grand Edelweiss Hotel</h3>
+            <time datetime="2021-09-01">March 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-netcry.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-netcry.jpg">
+            <img src="assets/portfolio/mobile/image-netcry.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Netcry Tower</h3>
+            <time datetime="2021-09-01">February 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-hypers.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-hypers.jpg">
+            <img src="assets/portfolio/mobile/image-hypers.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Hypers</h3>
+            <time datetime="2021-09-01">April 2021</time>
+          </figcaption>
+        </figure>
+
+        <!-- Row IV -->
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-sxiv.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-sxiv.jpg">
+            <img src="assets/portfolio/mobile/image-sxiv.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">SXIV Tower</h3>
+            <time datetime="2021-09-01">July 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-trinity.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-trinity.jpg">
+            <img src="assets/portfolio/mobile/image-trinity.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Trinity Bank Tower</h3>
+            <time datetime="2021-09-01">June 2021</time>
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure portfolio-project">
+          <picture>
+            <source media="(min-width: 992px)" srcset="assets/portfolio/desktop/image-paramour.jpg">
+            <source media="(min-width: 768px)" srcset="assets/portfolio/tablet/image-paramour.jpg">
+            <img src="assets/portfolio/mobile/image-paramour.jpg" alt="building">
+          </picture>
+          <figcaption class="project-figure-caption">
+            <h3 class="heading-3 text-white">Project Paramour</h3>
+            <time datetime="2021-09-01">May 2021</time>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container-lg">
+      <div class="footer__grid">
+        <a href="index.html" class="footer__logo"><img src="assets/logo-white.svg" alt="arch studio logo"></a>
+
+        <ul class="footer__nav flex items-center flex-col md:flex-row nav-list footer__nav-list">
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="portfolio.html" class="btn btn-primary">
+          See Our Portfolio
+          <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

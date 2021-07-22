@@ -1,0 +1,32 @@
+@use '../abstracts'as *;
+
+.portfolio-projects {
+    padding-bottom: 13.2rem;
+
+    @include respond-to(medium) {
+        padding-bottom: 20rem;
+    }
+
+    @include respond-to(large) {
+        padding-bottom: 16rem;
+    }
+}
+
+.portfolio-project {
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        display: block;
+        background-color: hsla(0, 0%, 100%, 0%);
+        transition: all 300ms ease-in-out;
+    }
+
+    &:hover {
+        &::after {
+            background-color: hsla(0, 0%, 100%, 50.34%);
+        }
+    }
+}

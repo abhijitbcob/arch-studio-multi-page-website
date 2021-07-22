@@ -1,0 +1,144 @@
+@use '../abstracts'as *;
+
+// Desktop Navigation
+.nav-list {
+
+    a {
+        font-weight: var(--font-bold);
+        transition: color 200ms;
+        position: relative;
+    }
+
+    a:link,
+    a:visited {
+        color: var(--medium-grey);
+
+    }
+
+    a:hover,
+    a:active {
+        color: var(--very-dark-blue);
+    }
+
+    a:focus-visible {
+        &::before {
+            position: absolute;
+            top: 3rem;
+            content: '';
+            display: block;
+            width: 2.4rem;
+            height: 1px;
+            background-color: var(--very-dark-blue);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.header__nav-list {
+    gap: 5.6rem;
+
+    a:is(.page-active):link,
+    a:is(.page-active):visited {
+        color: var(--very-dark-blue);
+    }
+}
+
+.footer__nav-list {
+    gap: 3.2rem;
+
+    @include respond-to(medium) {
+        gap: 5.6rem;
+    }
+}
+
+// Mobile Navigation
+// Mobile Menu toggler
+#menu-toggler {
+    border: none;
+    background: transparent;
+    margin-left: auto;
+    height: 1.7rem;
+    display: grid;
+    gap: 0.4rem;
+
+    span {
+        display: block;
+        position: relative;
+        width: 2.4rem;
+        height: 0.3rem;
+        background-color: var(--very-dark-blue);
+        transition: all 300ms ease-in-out;
+
+    }
+
+    &:focus-visible {
+        outline: 2px dotted var(--very-dark-blue);
+        outline-offset: 1rem;
+    }
+
+    @include respond-to(small) {
+        display: none;
+    }
+
+}
+
+.open #menu-toggler span {
+    &:nth-child(1) {
+        transform-origin: top left;
+        margin-top: -0.15rem;
+        transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    &:nth-child(3) {
+        transform-origin: bottom left;
+        margin-bottom: -0.15rem;
+        transform: rotate(-45deg);
+    }
+
+}
+
+.overlay {
+    position: fixed;
+    top: 9.6rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsla(0, 0%, 0%, 0%);
+    z-index: 20;
+    transition: all 300ms ease-in-out;
+    transform: translateX(100%);
+}
+
+.open .overlay {
+    background-color: hsla(0, 0%, 0%, 50%);
+    transform: translateX(0);
+
+    @include respond-to(small) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    background-color: var(--very-light-grey);
+    width: calc(100% - 3.2rem);
+    margin-left: auto;
+
+    &-list {
+        display: grid;
+        gap: 3.2rem;
+        padding: 4.8rem;
+
+        a:link,
+        a:visited {
+            font-size: 1.8rem;
+            color: var(--very-dark-blue);
+            font-weight: var(--font-bold);
+        }
+    }
+}

@@ -1,0 +1,80 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts'as *;
+
+.footer {
+    &__logo {
+        display: inline-block;
+        background-color: var(--very-dark-blue);
+        padding: 4.8rem 3.1rem;
+        grid-row: 1/-1;
+
+        margin-top: -6rem;
+
+        @include respond-to(medium) {
+            margin-top: 0;
+        }
+
+        @include respond-to(large) {
+            padding: 8rem 5.15rem;
+        }
+
+        img {
+            max-width: 5.77rem;
+
+            @include respond-to(large) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        justify-items: center;
+        grid-gap: 3.2rem;
+        background-color: var(--very-light-grey);
+        padding-bottom: 4.8rem;
+
+        @include respond-to(medium) {
+            grid-gap: 0;
+            align-items: center;
+            grid-template-columns: max-content 1fr 9.65rem 15.65rem;
+            background-color: transparent;
+            padding-bottom: 0;
+        }
+
+        @include respond-to(large) {
+            grid-template-columns: max-content 1fr repeat(2, 12.65rem);
+
+        }
+
+    }
+
+    &__nav {
+        background-color: var(--very-light-grey);
+
+        @include respond-to(medium) {
+            align-self: stretch;
+            justify-self: stretch;
+
+            padding-left: 4rem;
+            grid-row: 1/-1;
+            grid-column: 2/4;
+        }
+
+        @include respond-to(huge) {
+            padding-left: 8.5rem;
+        }
+    }
+
+    .btn {
+
+        @include respond-to(medium) {
+            grid-row: 1/-1;
+            grid-column: 3/-1;
+            justify-self: end;
+        }
+    }
+
+}

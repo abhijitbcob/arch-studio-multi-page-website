@@ -1,0 +1,32 @@
+@use '../abstracts'as *;
+
+.page-name-label {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 8.9rem;
+    align-items: center;
+    gap: 4.8rem;
+    transform-origin: top left;
+    transform: rotate(90deg);
+
+    @include respond-to(huge) {
+        display: flex;
+    }
+
+
+    &::before {
+        content: '';
+        width: 10.4rem;
+        height: 0.1rem;
+        display: inline-block;
+        background-color: var(--light-grey);
+        margin-top: -3px;
+    }
+
+    span {
+        color: var(--light-grey);
+        text-transform: uppercase;
+        letter-spacing: 1.5rem;
+    }
+}

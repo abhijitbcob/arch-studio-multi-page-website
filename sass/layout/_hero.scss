@@ -1,0 +1,75 @@
+@use '../abstracts'as *;
+
+.u-hero-article {
+    width: calc(100% - 3.2rem);
+    padding-left: 3.2rem;
+    padding-top: 8rem;
+    transform: translateY(-4.5rem);
+    background-color: var(--pure-white);
+
+    @include respond-to(medium) {
+        max-width: 45.5rem;
+        margin-top: 8.8rem;
+        margin-left: auto;
+        padding: 0;
+        transform: translateY(0);
+
+    }
+
+    @include respond-to(large) {
+        max-width: 44.5rem;
+        margin-top: 16rem;
+    }
+
+    h2 {
+        @include respond-to(medium) {
+            margin-top: 7.4rem;
+        }
+    }
+
+    h2+p {
+        margin-top: 1.2rem;
+
+        @include respond-to(medium) {
+            margin-top: 3.5rem;
+        }
+
+        @include respond-to(large) {
+            margin-top: 3rem;
+        }
+    }
+
+    .u-little-hr {
+        display: none;
+
+        @include respond-to(large) {
+            display: block;
+        }
+    }
+}
+
+.u-hero-header {
+    position: relative;
+    z-index: 10;
+
+    h1 {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        right: 0;
+    }
+}
+
+.about-h1 {
+    @include respond-to(large) {
+        right: auto;
+        left: -2.4rem;
+    }
+}
+
+.contact-h1 {
+    @include respond-to(large) {
+        right: auto;
+        left: -19.4rem;
+    }
+}
