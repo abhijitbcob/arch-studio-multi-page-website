@@ -1026,6 +1026,7 @@ li {
   opacity: 50%;
   color: var(--very-light-grey);
   font-size: 20rem;
+  font-weight: var(--font-bold);
   letter-spacing: -5px;
   line-height: 1;
 }
