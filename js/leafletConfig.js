@@ -15,6 +15,7 @@ var marker2 = L.marker([32.511850102488, -92.11902701939424], {
 }).addTo(mymap);
 
 L.tileLayer(
+  /*
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWJoaWppdGJjb2IiLCJhIjoiY2tyZWttMXJwMHA4ajJvb2UyM2x5OWlvdyJ9.gG49w8uAWxHtMobo1jxr2g",
   {
     attribution:
@@ -25,5 +26,10 @@ L.tileLayer(
     zoomOffset: -1,
     accessToken:
       "pk.eyJ1IjoiYWJoaWppdGJjb2IiLCJhIjoiY2tyZWttMXJwMHA4ajJvb2UyM2x5OWlvdyJ9.gG49w8uAWxHtMobo1jxr2g",
+  }*/
+  "http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+  {
+    maxZoom: 17,
+    subdomains: ["mt0", "mt1", "mt2", "mt3"],
   }
 ).addTo(mymap);
