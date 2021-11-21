@@ -1,8 +1,10 @@
+import Siema from "./siema.js";
+
 // MOBILE MENU
 const header = document.querySelector(".header");
 const menuToggler = document.querySelector("#menu-toggler");
 const body = document.querySelector("body");
-const siema = document.querySelector(".siema");
+const carousel = document.querySelector(".siema");
 
 menuToggler.addEventListener("click", function () {
   if (header.classList.contains("open")) {
@@ -17,20 +19,21 @@ menuToggler.addEventListener("click", function () {
 /* -----------Siema carousel starts here ----------- */
 // Siema doesn't come with pagination built in
 // But it is very easy to add one if you want
-// New siema instance
+// To get started, create new siema instance
 
-if (siema) {
+if (carousel) {
   const mySiema = new Siema({
     startIndex: 0,
     onChange: function () {
       this.updateIndicator();
     },
+
     draggable: true,
     duration: 270,
     loop: true,
   });
 
-  // Add a function that generates pagination to prototype
+  // Add a function that generates pagination
   Siema.prototype.addPagination = function () {
     for (let i = 0; i < this.innerElements.length; i++) {
       const btn = document.createElement("button");
@@ -70,11 +73,10 @@ if (siema) {
   // listen for keydown event
   setInterval(() => {
     mySiema.next();
-    mySiema.updateIndicator();
   }, 3000);
 }
 
-/* --------- Carousel End here ------------- */
+//////////////////////////////////////
 // Indicating the active page link
 const headerNavLinks = document.querySelectorAll(".header__nav-list a");
 
