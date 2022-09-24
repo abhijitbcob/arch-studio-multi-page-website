@@ -1,0 +1,49 @@
+*********** Google Tag Manager ************
+
+Tags is usually a tracking code that you want to implement on your website.
+It might be Facebook pixel event tag, might be Google Analytics, page view,
+google ads conversion code or whatever.
+
+So if you want activate a certain tracking code on site that is a tag, then
+there are triggers. Triggers are conditions when you want your tags to fire.
+
+Then there is a third component, which is called variables. Variables are
+little data points that you can use in tags or triggers. Sometimes variables
+might contain more information. Sometimes variables are even more complex
+functions. 
+
+But in this case, you should start simple. So you can just think of variables
+as data points that can contain a single value, or maybe a bit more complex,
+but still some information, some data or some configuration. 
+
+**** Tags, Triggers & Variables: 3 questions ***
+
+* What do you want GTM to do? - Tag 
+* When do you want to do it? - Trigger
+* What/when/how exactly? - Variable
+
+-> Tag is a piece of JavaScript that you want to activate on your site.
+-> Trigger is a condition when you want to happen.
+-> Varible is data point or adding up some set of information or may be some
+function that you use to either to make the trigger more specific or to
+transfer that particular data to third party tools. And I believe that 
+variables are the most confusing.  
+
+
+Example:
+
+       Tag                      Trigger
+|----------------|          |------------------------|
+|   Google Ads   |          | On a Thank you Page    |
+| Conversion Tag |----------|                        |
+|                |          |      variable:         |
+|                |          |       Page URL:        |
+|                |          |  /purchase-successful/ | 
+|----------------|          |------------------------|
+
+
+
+we want our trigger to fire not on any page view, but only on those pages,
+where a variable, which is Page URL contains "/purchase-successful/", because
+we know know that a visitor lands on this page only when that visitor has 
+actually purchased something. So this is our conversion.

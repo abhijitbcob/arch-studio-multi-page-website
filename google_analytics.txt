@@ -1,0 +1,8 @@
+******* Google Analytics *******
+
+Google Analytics is a platform allows you to connect data from multitple 
+sources.
+
+[ Data stream (web) ] + [ Data stream (Android) ] + [ Data stream (iOS) ] =
+
+Google Analytics Property
