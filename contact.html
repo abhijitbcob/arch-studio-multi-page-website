@@ -1,184 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | Arch Studio Website Challenge</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TWWVJPZ");
+    </script>
+    <!-- End Google Tag Manager -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Arch Studio Website Challenge</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin="" />
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HGFVL049ZF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-</head>
+      gtag("config", "G-HGFVL049ZF");
+    </script>
+  </head>
 
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="flex items-center">
-        <a href="index.html">
-          <img class="logo" src="assets/logo.svg" alt="logo">
-        </a>
-        <nav class="header__nav hide-upto-md">
-          <ul class="flex items-center nav-list header__nav-list">
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img class="logo" src="assets/logo.svg" alt="logo" />
+          </a>
+          <nav class="header__nav hide-upto-md">
+            <ul class="flex items-center nav-list header__nav-list">
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <button id="menu-toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list">
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-
-        <button id="menu-toggler">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
-    </div>
+    </header>
 
-    <div class="overlay">
-      <nav class="mobile-nav">
-        <ul class="mobile-nav-list">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <main>
+      <div class="page-name-label"><span>contact</span></div>
 
-  <main>
-    <div class="page-name-label"><span>contact</span></div>
+      <div class="container-sm">
+        <div class="u-hero-grid">
+          <div class="u-black-overlay u-bg-black-35 u-hero-picture relative">
+            <picture>
+              <source media="(min-width: 992px)" srcset="assets/contact/desktop/image-hero.jpg" />
+              <source media="(min-width: 768px)" srcset="assets/contact/tablet/image-hero.jpg" />
+              <img class="w-full" src="assets/contact/mobile/image-hero.jpg" alt="about hero image" />
+            </picture>
+          </div>
 
-    <div class="container-sm">
-      <div class="u-hero-grid">
-        <div class="u-black-overlay u-bg-black-35 u-hero-picture relative">
-          <picture>
-            <source media="(min-width: 992px)" srcset="assets/contact/desktop/image-hero.jpg">
-            <source media="(min-width: 768px)" srcset="assets/contact/tablet/image-hero.jpg">
-            <img class="w-full" src="assets/contact/mobile/image-hero.jpg" alt="about hero image">
-          </picture>
+          <header class="u-hero-header">
+            <h1 class="heading-1--large contact-h1">Contact</h1>
+            <article class="u-hero-article">
+              <div class="u-little-hr"></div>
+              <h2 class="heading-2 text-black">Tell us about your project</h2>
+              <p class="paragraph">
+                We’d love to hear more about your project. Please, leave a message below or give us a call. We have two
+                offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!
+              </p>
+            </article>
+          </header>
         </div>
-
-
-        <header class="u-hero-header">
-          <h1 class="heading-1--large contact-h1">Contact</h1>
-          <article class="u-hero-article">
-            <div class="u-little-hr"></div>
-            <h2 class="heading-2 text-black">
-              Tell us about your project
-            </h2>
-            <p class="paragraph">
-              We’d love to hear more about your project. Please, leave a message below or give
-              us a call. We have two offices, one in Texas and one in Tennessee. If you find
-              yourself nearby, come say hello!
-            </p>
-          </article>
-        </header>
       </div>
-    </div>
 
-    <div class="u-main-content">
-      <section class="section-contact-info">
-        <div class="container">
-          <div class="grid lg:grid-col-3 contact-details-grid">
-            <h2 class="heading-2 text-black">
-              Contact <br> Details
-            </h2>
-            <div class="contact-details">
-              <div>
-                <h4 class="heading-4">Main Office</h4>
-                <p class="paragraph">Mail: archone@mail.com</p>
-                <p class="paragraph">Address: 1892 Chenoweth Drive TN</p>
-                <p class="paragraph">Phone: 123-456-3451</p>
+      <div class="u-main-content">
+        <section class="section-contact-info">
+          <div class="container">
+            <div class="grid lg:grid-col-3 contact-details-grid">
+              <h2 class="heading-2 text-black">
+                Contact <br />
+                Details
+              </h2>
+              <div class="contact-details">
+                <div>
+                  <h4 class="heading-4">Main Office</h4>
+                  <p class="paragraph">Mail: archone@mail.com</p>
+                  <p class="paragraph">Address: 1892 Chenoweth Drive TN</p>
+                  <p class="paragraph">Phone: 123-456-3451</p>
+                </div>
+                <a href="#" class="btn btn-transparent"
+                  >View on Map <img src="./assets/icons/icon-arrow-black.svg" alt="arrow"
+                /></a>
               </div>
-              <a href="#" class="btn btn-transparent">View on Map <img src="./assets/icons/icon-arrow-black.svg"
-                  alt="arrow"></a>
-            </div>
 
-            <div class="contact-details">
-              <div>
-                <h4 class="heading-4">Office II</h4>
-                <p>Mail: archone@mail.com</p>
-                <p>Address: 3399 Wines Lane TX</p>
-                <p>Phone: 832-123-4321</p>
+              <div class="contact-details">
+                <div>
+                  <h4 class="heading-4">Office II</h4>
+                  <p>Mail: archone@mail.com</p>
+                  <p>Address: 3399 Wines Lane TX</p>
+                  <p>Phone: 832-123-4321</p>
+                </div>
+                <a href="#" class="btn btn-transparent"
+                  >View on Map <img src="./assets/icons/icon-arrow-black.svg" alt="arrow"
+                /></a>
               </div>
-              <a href="#" class="btn btn-transparent">View on Map <img src="./assets/icons/icon-arrow-black.svg"
-                  alt="arrow"></a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-
-      <section class="section-map">
-        <div class="container-sm">
-          <div class="location-map">
-            <div id="mapid"></div>
+        <section class="section-map">
+          <div class="container-sm">
+            <div class="location-map">
+              <div id="mapid"></div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="cwu">
-        <div class="container">
-          <div class="cwu-innermost-wrapper flex lg:flex-row flex-col">
-            <h2 class="heading-2 text-black">Conntect <br> with us</h2>
+        <section class="cwu">
+          <div class="container">
+            <div class="cwu-innermost-wrapper flex lg:flex-row flex-col">
+              <h2 class="heading-2 text-black">
+                Conntect <br />
+                with us
+              </h2>
 
-            <form action="#" class="form">
+              <form action="#" class="form">
+                <div class="form__group">
+                  <input
+                    type="text"
+                    name="fullName"
+                    id="fullName"
+                    class="form__input"
+                    placeholder="Name"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    name="emailId"
+                    id="emailId"
+                    class="form__input"
+                    placeholder="Email"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form__group">
+                  <textarea
+                    type="text"
+                    name="message"
+                    id="message"
+                    class="form__input"
+                    placeholder="Message"
+                    autocomplete="off"
+                  ></textarea>
+                </div>
 
-              <div class="form__group">
-                <input type="text" name="fullName" id="fullName" class="form__input" placeholder="Name"
-                  autocomplete="off">
-              </div>
-              <div class="form__group">
-                <input type="text" name="emailId" id="emailId" class="form__input" placeholder="Email"
-                  autocomplete="off">
-              </div>
-              <div class="form__group">
-                <textarea type="text" name="message" id="message" class="form__input" placeholder="Message"
-                  autocomplete="off"></textarea>
-              </div>
-
-
-              <button class="btn btn-secondary btn-submit"><img src="./assets/icons/icon-arrow.svg"
-                  alt="arrow icon"></button>
-
-            </form>
+                <button class="btn btn-secondary btn-submit">
+                  <img src="./assets/icons/icon-arrow.svg" alt="arrow icon" />
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-
-  <footer class="footer">
-    <div class="container-lg">
-      <div class="footer__grid">
-        <a href="index.html" class="footer__logo"><img src="assets/logo-white.svg" alt="arch studio logo"></a>
-
-
-        <ul class="footer__nav flex items-center flex-col md:flex-row nav-list footer__nav-list">
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-
-        <a href="portfolio.html" class="btn btn-primary">
-          See Our Portfolio
-          <img src="assets/icons/icon-arrow.svg" alt="arrow icon">
-        </a>
+        </section>
       </div>
-    </div>
-  </footer>
-  <script src="js/script.js"></script>
-  <script src="js/leafletConfig.js"></script>
-</body>
+    </main>
 
+    <footer class="footer">
+      <div class="container-lg">
+        <div class="footer__grid">
+          <a href="index.html" class="footer__logo"><img src="assets/logo-white.svg" alt="arch studio logo" /></a>
+
+          <ul class="footer__nav flex items-center flex-col md:flex-row nav-list footer__nav-list">
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <a href="portfolio.html" class="btn btn-primary">
+            See Our Portfolio
+            <img src="assets/icons/icon-arrow.svg" alt="arrow icon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/leafletConfig.js"></script>
+  </body>
 </html>

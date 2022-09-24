@@ -6,3 +6,12 @@ sources.
 [ Data stream (web) ] + [ Data stream (Android) ] + [ Data stream (iOS) ] =
 
 Google Analytics Property
+
+
+# Universal Analytics       # Google Analytics 4
+-> Pageviews                -> Events(all events)
+-> Events
+-> Ecommerce
+-> Social interactions
+-> Timing
+-> etc.
