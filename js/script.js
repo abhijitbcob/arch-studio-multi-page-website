@@ -50,12 +50,8 @@ if (carousel) {
   };
 
   Siema.prototype.updateIndicator = function () {
-    const allIndicators = document.querySelector(
-      ".carousel__indicators"
-    ).childNodes;
-    let activeSlide = document.querySelector(
-      `[data-slide-no = "${this.currentSlide}"`
-    );
+    const allIndicators = document.querySelector(".carousel__indicators").childNodes;
+    let activeSlide = document.querySelector(`[data-slide-no = "${this.currentSlide}"`);
 
     allIndicators.forEach((indicator) => {
       indicator.classList.remove("btn-tertiary--active");
@@ -93,8 +89,7 @@ const elemsToValidate = document.querySelectorAll(".form__input");
 const btnSubmit = document.querySelector(".btn-submit");
 
 function validateForm(e) {
-  var mailformat =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   elemsToValidate.forEach((element) => {
     if (element.value == "") {
@@ -102,10 +97,7 @@ function validateForm(e) {
       if (element.nextElementSibling) {
         element.parentElement.removeChild(element.nextElementSibling);
       }
-      element.parentElement.insertAdjacentHTML(
-        "beforeend",
-        "<p class='form__error'>Can't be empty</p>"
-      );
+      element.parentElement.insertAdjacentHTML("beforeend", "<p class='form__error'>Can't be empty</p>");
       element.classList.add("form__input-error");
     }
 
@@ -139,13 +131,19 @@ if (form) {
 
   elemsToValidate.forEach((item) => {
     item.addEventListener("blur", function (e) {
-      if (
-        e.target.classList.contains("form__input-error") &&
-        !e.target.nextElementSibling
-      ) {
+      if (e.target.classList.contains("form__input-error") && !e.target.nextElementSibling) {
         console.log(e);
         e.target.classList.remove("form__input-error");
       }
     });
+  });
+}
+
+//////////////////////////////
+// GTM Data layer
+const contact_links = document.querySelectorAll(".contact-link");
+for (const link of contact_links) {
+  link.addEventListener("click", () => {
+    dataLayer.push({ event: "contact-link-click", value: true });
   });
 }

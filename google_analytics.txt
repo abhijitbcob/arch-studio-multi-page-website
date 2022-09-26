@@ -15,3 +15,23 @@ Google Analytics Property
 -> Social interactions
 -> Timing
 -> etc.
+
+
+## Google Analytics 4 event tracking:
+there are 4 types of events:
+1. Automatically tracked events
+2. Enhanced Measurement (automatic tracking)
+3. Recommended Events
+4. Custom Events
+
+# Automatically tracked events
+1. first_session // when user first time visit
+2. session_start
+3. user_engagement
+
+# Enhanced Measurement
+1. Page views 
+2. Scrolls 
+3. site search
+4. Video user_engagement
+5. file downloads
