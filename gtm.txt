@@ -45,18 +45,5 @@ Example:
 
 we want our trigger to fire not on any page view, but only on those pages,
 where a variable, which is Page URL contains "/purchase-successful/", because
-we know that a visitor lands on this page only when that visitor has 
-actually purchased something. So this is our conversion.
-
-
-********** GTM DataLayer **********
-Who / What can send data to the Data layer?
-
-1. Developers
-2. Website plugins
-3. Google Tag Manager's listeners
-4. You
-we know know that a visitor lands on this page only when that visitor has 
-actually purchased something. So this is our conversion.
 we know know that a visitor lands on this page only when that visitor has 
 actually purchased something. So this is our conversion.
